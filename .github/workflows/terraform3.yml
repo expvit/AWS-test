@@ -1,8 +1,9 @@
 name: Destroy
 on:
-  workflow_dispatch:
-    inputs:
-      env: dev
+  push:
+    branches:
+    - main
+  pull_request:
 jobs:
   destroy:
     name: "Destroy AWS"
