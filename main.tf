@@ -9,6 +9,8 @@ terraform {
       version = "~> 3.75.2"
     }
   }
+} 
+
 
 resource "aws_instance" "ubuntu" {
   ami = "ami-0022f774911c1d690"
