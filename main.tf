@@ -31,7 +31,7 @@ resource "aws_instance" "ubuntu" {
   tags = {
 
     Name = "remove"
-
+  }
 }
 
 
