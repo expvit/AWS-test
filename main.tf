@@ -23,3 +23,9 @@ resource "aws_instance" "ubuntu" {
     
   }
 }
+
+
+output "network" {
+  value = "${aws_eip.nat.public_ip}"
+}
+
