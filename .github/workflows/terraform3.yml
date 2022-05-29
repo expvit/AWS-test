@@ -9,13 +9,13 @@ jobs:
     name: "Destroy AWS"
     runs-on: ubuntu-latest
     steps:
-        - name: AWS Plan Copy
-          run: aws s3 cp s3://vstaslon/dev/test/terraform.tfstate
-          id: copy
-          env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            AWS_REGION: us-east-1
+        #- name: AWS Plan Copy
+        # run: aws s3 cp s3://vstaslon/dev/test/terraform.tfstate
+        #  id: copy
+        #  env:
+        #    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #    AWS_REGION: us-east-1
 
         - name: Show Destroy plan
           run: terraform plan -destroy
