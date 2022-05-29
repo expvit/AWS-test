@@ -32,6 +32,7 @@ resource "aws_instance" "ubuntu" {
 
     Name = "remove"
     Owner = "vs"
+    Provided = "GitLHubAction"
   }
 }
 
