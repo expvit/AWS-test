@@ -11,6 +11,17 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
+terraform {
+  backend "s3" {
+    bucket = "vstaslon"
+    key    = "dev/test/terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "state_lock"
+  }
+}
+
+
 resource "aws_instance" "ubuntu" {
   ami = "ami-0022f774911c1d690"
   instance_type = "t2.micro"
@@ -20,9 +31,7 @@ resource "aws_instance" "ubuntu" {
   tags = {
 
     Name = "remove"
-    Owner = "vs"
-    Provided = "GitHubAction"
-  }
+
 }
 
 
