@@ -25,7 +25,6 @@ resource "aws_instance" "ubuntu" {
 }
 
 
-output "network" {
-  value = aws_vpc.vs_main.cidr_block
+output "server_id" {
+  value = aws_instance.ubuntu.id
 }
-
