@@ -11,7 +11,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-<<<<<<< HEAD
+
 /*
 =======
 
@@ -36,8 +36,7 @@ resource "aws_instance" "ubuntu" {
   tags = {
 
     Name = "remove"
-    Owner = "vs"
-    Provided = "GitLHubAction"
+    
   }
 }
 
