@@ -11,7 +11,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
+/*
 terraform {
   backend "s3" {
     bucket = "vstaslon"
@@ -20,7 +20,7 @@ terraform {
     dynamodb_table = "state_lock"
   }
 }
-
+*/
 
 resource "aws_instance" "ubuntu" {
   ami = "ami-0022f774911c1d690"
