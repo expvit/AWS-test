@@ -44,3 +44,7 @@ resource "aws_instance" "ubuntu" {
 output "server_id" {
   value = aws_instance.ubuntu.id
 }
+
+output "vpc_main_route_table_id" {
+  value       = aws_vpc.default.main_route_table_id
+}
