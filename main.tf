@@ -11,7 +11,12 @@ provider "aws" {
   region = "us-east-1"
 }
 
+<<<<<<< HEAD
 /*
+=======
+
+
+>>>>>>> d7bdeb571225aadb55fa2092e3aeb1a0fa07a37d
 terraform {
   backend "s3" {
     bucket = "vstaslon"
